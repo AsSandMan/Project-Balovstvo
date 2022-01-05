@@ -100,6 +100,7 @@ while not end_of_game:
             display[position] = letter
         else:
             print("No match")
+#TODO-01 - СДЕЛАЙ НОРМАЛЬНО!
 
 
     print(display)
