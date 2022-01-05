@@ -58,7 +58,7 @@ stages = ['''
 =========
 ''']
 
-
+lives = 6
 end_of_game = False
 word_list = ["ardvark", "baboon", "camel"]
 
@@ -98,6 +98,8 @@ while not end_of_game:
         letter = chosen_word[position]
         if letter == user_guess:
             display[position] = letter
+        else:
+            print("No match")
 
 
     print(display)
