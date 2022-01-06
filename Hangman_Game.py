@@ -18,6 +18,7 @@ stages = ['''
       |
 =========
 ''', '''
+
   +---+
   |   |
   O   |
@@ -25,14 +26,17 @@ stages = ['''
       |
       |
 =========
-''', '''
+''',
+          '''
   +---+
   |   |
   O   |
  /|   |
       |
       |
-=========''', '''
+=========
+''',
+          '''
   +---+
   |   |
   O   |
@@ -40,7 +44,8 @@ stages = ['''
       |
       |
 =========
-''', '''
+''',
+          '''
   +---+
   |   |
   O   |
@@ -48,7 +53,8 @@ stages = ['''
       |
       |
 =========
-''', '''
+''',
+          '''
   +---+
   |   |
       |
@@ -56,9 +62,10 @@ stages = ['''
       |
       |
 =========
+
 ''']
 
-lives = 6
+lives = 7
 end_of_game = False
 word_list = ["ardvark", "baboon", "camel"]
 
@@ -98,8 +105,16 @@ while not end_of_game:
         letter = chosen_word[position]
         if letter == user_guess:
             display[position] = letter
-        else:
-            print("No match")
+
+
+    if user_guess not in chosen_word:
+        print(stages[lives - 1])
+        lives -= 1
+        if lives < 1:
+            end_of_game = True
+            print("Game Over")
+
+
 #TODO-01 - СДЕЛАЙ НОРМАЛЬНО!
 
 
