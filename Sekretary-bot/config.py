@@ -1,0 +1,3 @@
+
+TOKEN = '2137011748:AAFVwKv-qx2QWO9WNKq_GMNd36AAxSIRUL0'
+open_weather_token = 'cba66ad41cc6ca5345f37376da77f713'
